@@ -1,4 +1,5 @@
 declare -A dict
+declare -a arr
 read -p "ENTER A : " a
 read -p "ENTER B : " b
 read -p "ENTER C : " c
@@ -14,5 +15,7 @@ dict["c1"]+=$c1
 dict["c2"]+=$c2
 dict["c3"]+=$c3
 dict["c4"]+=$c4
-
+a=0
+arr[((a++))]=${dict[@]}
 echo -e "\nDICTIONARY : ${dict[@]}"
+echo -e "\nARRAY VALs : ${arr[@]}"
